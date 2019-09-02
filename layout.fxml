@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="70.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="130.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Button mnemonicParsing="false" onAction="#createPass" prefHeight="30.0" prefWidth="203.0" text="Create password" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="9" />
+      <RadioButton fx:id="charLong" mnemonicParsing="false" onAction="#selLong" text="32 characters" GridPane.columnIndex="1" GridPane.rowIndex="5">
+         <toggleGroup>
+            <ToggleGroup fx:id="password" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="charMedium" mnemonicParsing="false" onAction="#selMedium" text="16 characters" toggleGroup="$password" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+      <RadioButton fx:id="charShort" mnemonicParsing="false" onAction="#selShort" selected="true" text="8 characters" toggleGroup="$password" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Password Length" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Password Complexity" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+      <CheckBox fx:id="caps" mnemonicParsing="false" onAction="#capsChecked" text="Caps" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+      <CheckBox fx:id="specialChar" mnemonicParsing="false" onAction="#specChecked" text="Special Characters" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+      <CheckBox fx:id="nums" mnemonicParsing="false" onAction="#numChecked" text="Numbers" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+      <TextField fx:id="textArea" alignment="CENTER" prefHeight="25.0" prefWidth="173.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="7" />
+   </children>
+</GridPane>
